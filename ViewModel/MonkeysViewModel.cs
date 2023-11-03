@@ -21,7 +21,7 @@ public partial class MonkeysViewModel : BaseViewModel
     [ObservableProperty]
     bool isRfreshing;
 
-    [ICommand]
+    [RelayCommand]
     async Task GetClosestMonkeyAsync()
     {
         if (IsBusy || Monkeys.Count == 0) return;
@@ -60,7 +60,7 @@ public partial class MonkeysViewModel : BaseViewModel
         }
     }
 
-    [ICommand]
+    [RelayCommand]
     async Task GoToDetailsAsync(Monkey monkey)
     {
         if (monkey is null)
@@ -71,7 +71,7 @@ public partial class MonkeysViewModel : BaseViewModel
         });
     }
 
-    [ICommand]
+    [RelayCommand]
     async Task GetMonkeysAsync()
     {
         if (IsBusy) return;
