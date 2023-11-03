@@ -13,13 +13,13 @@ public partial class MonkeyDetailsViewModel : BaseViewModel
     [ObservableProperty]
     Monkey monkey;
 
-    //[ICommand]
+    //[RelayCommand]
     //async Task GoBackAsync()
     //{
     //    await Shell.Current.GoToAsync("..");
     //}
 
-    [ICommand]
+    [RelayCommand]
     async Task OpenMapAsync()
     {
         try
